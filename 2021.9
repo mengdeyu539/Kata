@@ -6,3 +6,13 @@ def delete_nth(a,n):
         if an.count(i)<n:
             an.append(i)
     return an
+
+2021/9/11
+#2 Which are in?
+def in_array(a1, a2):
+    l1 = sorted([i for i in a1 if i in ' '.join(a2)])
+    a = []
+    for i in l1:
+        if a.count(i)<1:
+            a.append(i)
+    return a
