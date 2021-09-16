@@ -16,3 +16,15 @@ def in_array(a1, a2):
         if a.count(i)<1:
             a.append(i)
     return a
+    
+2021/9/16
+#3 Replace With Alphabet Position
+def alphabet_position(a):
+    b = '0abcdefghijklmnopqrstuvwxyz'
+    a=a.replace("'",'').replace('.','').replace(' ','').lower()
+    c = []
+    for i in a:
+        if i in b:
+            e = str(b.index(i))
+            c.append(e)
+    return " ".join(c)
