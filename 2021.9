@@ -28,3 +28,11 @@ def alphabet_position(a):
             e = str(b.index(i))
             c.append(e)
     return " ".join(c)
+
+2021/9/18
+#4 CamelCase Method
+def camel_case(string):
+    a = []
+    for i in string.split():
+        a.append(i.capitalize())
+    return ''.join(a)
