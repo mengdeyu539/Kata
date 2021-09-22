@@ -36,3 +36,17 @@ def camel_case(string):
     for i in string.split():
         a.append(i.capitalize())
     return ''.join(a)
+
+2021/9/22
+#5 Is a number prime?
+def is_prime(num):
+    s = 0
+    if num<=1:
+        return False
+    else:
+        for i in range(1,num+1):
+            if num%i==0:
+                s+=1
+    if s==2:
+        return True
+    return False
