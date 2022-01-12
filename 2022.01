@@ -29,3 +29,25 @@ def encode(s, t=str.maketrans("aeiou", "12345")):
     
 def decode(s, t=str.maketrans("12345", "aeiou")):
     return s.translate(t)
+    
+2.Find  the  missing letter
+my answer:
+def find_missing_letter(c):
+    a1= 'abcdefghijklmnopqrstuvwxyz'
+    a2 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    if c[0].islower():
+        ind  = a1.index(c[0])
+        for i in range(len(c)):
+            if c[i]!=a1[ind+i]:
+                return a1[ind+i]
+    else:
+        ind = a2.index(c[0])
+        for i in range(len(c)):
+            if c[i]!=a2[ind+i]:
+                return a2[ind+i]
+other:
+def find_missing_letter(chars):
+    n = 0
+    while ord(chars[n]) == ord(chars[n+1]) - 1:
+        n += 1
+    return chr(1+ord(chars[n]))
