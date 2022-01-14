@@ -76,3 +76,12 @@ def likes(names):
         3: '{}, {} and {} like this', 
         4: '{}, {} and {others} others like this'
     }[min(4, n)].format(*names[:3], others=n-2)
+    
+2022/1/14
+1.Moveing Zeros to the end
+my answer:
+def move_zeros(array):
+    return [n for n in array if n!=0]+[n for n in array if n==0]
+other:
+def move_zeros(array):
+    return sorted(array, key=lambda x: x == 0 and x is not False)
